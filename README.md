@@ -7,3 +7,5 @@ Alunos: DENISSON SANTOS ALVES DE FREITAS  <br/>
 Tema: Sistema interno de uma loja.  <br/>
 LINK do vídeo com a explicação completa (15:00 min):  https://youtu.be/X9PDAL35xrg.  <br/>
 LINK do vídeo com execução do código de forma resumida (5:00 min): https://youtu.be/zulCxPRIn3k.  <br/>
+
+Última modificação realizada: Foi modificado o código do cadastro do endereço para vincular mais de um CPF ao mesmo endereço completando o relacionamento muitos para muitos.
