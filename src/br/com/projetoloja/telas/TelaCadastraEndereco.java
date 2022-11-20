@@ -19,6 +19,7 @@ public class TelaCadastraEndereco extends javax.swing.JInternalFrame {
     PreparedStatement pst = null;
     ResultSet rs = null;
     ResultSet rs2 = null;
+    ResultSet rs3 = null;
     private String cpf_logado;
 
     /**
@@ -72,8 +73,7 @@ public class TelaCadastraEndereco extends javax.swing.JInternalFrame {
                     JOptionPane.showMessageDialog(null, "CPF não existe!");
                 }
                 if (valida) {
-                    //Cria o endereço
-                    pst.executeUpdate();
+                    
                     
                     //Consulta ID do endereço registrado
                     PreparedStatement pst4 = conexao.prepareStatement(sql4);
@@ -87,11 +87,36 @@ public class TelaCadastraEndereco extends javax.swing.JInternalFrame {
 
                     if (rs2.next()) {
                         //Update da tabela reside
+                        JOptionPane.showMessageDialog(null, "Endereço existente, vinculando ao cpf...");
                         PreparedStatement pst3 = conexao.prepareStatement(sql3);
                         pst3.setString(1, rs2.getString(1));
                         pst3.setString(2, txtCPFCadEnd.getText());
                         pst3.executeUpdate();
                         JOptionPane.showMessageDialog(null, "Endereço cadastrado com sucesso!");
+                    }else {
+                        JOptionPane.showMessageDialog(null, "Endereço não existente, criando endereço e vinculando ao cpf...");
+                        //Cria o endereço
+                        pst.executeUpdate();
+                        
+                         //Consulta ID do endereço registrado
+                        PreparedStatement pst5 = conexao.prepareStatement(sql4);
+                        pst5.setString(1, txtLograCadEnd.getText());
+                        pst5.setString(2, txtEstadoCadEnd.getText());
+                        pst5.setString(3, txtCidadeCadEnd.getText());
+                        pst5.setString(4, txtBairroCadEnd.getText());
+                        pst5.setString(5, txtNumeroCadEnd.getText());
+                        pst5.setString(6, txtCepCadEnd.getText());
+                        rs3 = pst5.executeQuery();
+                        
+                        if(rs3.next()){
+                            //Update da tabela reside
+                            PreparedStatement pst3 = conexao.prepareStatement(sql3);
+                            pst3.setString(1, rs3.getString(1));
+                            pst3.setString(2, txtCPFCadEnd.getText());
+                            pst3.executeUpdate();
+                            JOptionPane.showMessageDialog(null, "Endereço cadastrado com sucesso!");
+                        }
+                         
                     }
                 }
 
