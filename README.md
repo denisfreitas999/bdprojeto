@@ -1,5 +1,5 @@
 # bdprojeto
-Projeto realizado na disciplina de Banco de Dados 1 || Universidade Federal de Sergipe <\br>
+Projeto realizado na disciplina de Banco de Dados 1 || Universidade Federal de Sergipe <br/>
 Professor: ANDRE BRITTO DE CARVALHO
 Alunos: DENISSON SANTOS ALVES DE FREITAS
         JOSIEL ALEMÃO SANTOS SILVEIRA
