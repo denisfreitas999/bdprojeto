@@ -5,5 +5,5 @@ Alunos: DENISSON SANTOS ALVES DE FREITAS
         JOSIEL ALEMÃO SANTOS SILVEIRA
         MARCELO HENRIQUE LIMA BARRETO
 Tema: Sistema interno de uma loja.
-LINK do vídeo com a explicação completa (15:00 min):  https://youtu.be/X9PDAL35xrg
-LINK do vídeo com execução do código de forma resumida (5:00 min): https://youtu.be/zulCxPRIn3k
+LINK do vídeo com a explicação completa (15:00 min):  https://youtu.be/X9PDAL35xrg.
+LINK do vídeo com execução do código de forma resumida (5:00 min): https://youtu.be/zulCxPRIn3k.
